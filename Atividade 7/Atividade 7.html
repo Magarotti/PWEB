@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Pedra, papel e tesoura</title>
+    <script>
+        function jogo(EP){
+
+            var EM = Math.random();
+
+            
+
+            if(EM < 0.33){
+                EM = 1;
+            }else if(EM < 0.66){
+                EM = 2;
+            }else {
+                EM = 3;
+            }
+            alert(" a " + EP + EM);
+
+            if(EP == EM){
+                alert("Empate");
+            }else if (EP == 1 && EM == 3){
+                alert("Você perdeu");
+            }else if (EP == 2 && EM == 1){
+                alert("Você perdeu");
+            }else if (EP == 3 && EM == 2){
+                alert("Você perdeu");
+            }else{
+                alert("Você ganhou");
+            }
+
+
+        }
+
+        function papel(){
+            jogo(1);
+        }
+        function pedra(){
+            jogo(2);
+        }
+        function tesoura(){
+            jogo(3);
+        }
+
+    </script>
+</head>
+<body>
+    
+
+
+    <button onclick="papel()">Papel</button>
+    <input type="button"  value="Pedra"  onclick="pedra()">
+    <input type="button"  value="Tesoura"  onclick="tesoura()">
+
+</body>
+</html>
