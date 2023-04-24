@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ativdade 10</title>
+</head>
+<body>
+    <script>
+        var aluno1 = new Object();
+        aluno1.ra = "00001234";
+        aluno1.nome = "pedro pedregulho pedroso";
+        alert("ra =" + aluno1.ra + " nome = " + aluno1.nome);
+
+        var aluno2 = {};
+        aluno2.ra = "4321";
+        aluno2["nome"] = "Matagal"
+        alert("ra = " + aluno2.ra + " nome = " + aluno2.nome)
+
+        var aluno3 = {
+            ra: "123321",
+            nome: "Giorno",
+        };
+        alert("ra = " + aluno3.ra + " nome = " + aluno3.nome)
+
+        function aluno(ra,nome)
+        {
+            this.ra = ra;
+            this.nome = nome;
+            
+            this.mostraDados = function()
+            {
+                alert("ra = "+this.ra + " nome = " + this.nome)
+            }
+        }
+        var aluno4 = new aluno("312","Lucul");
+        var x = aluno4.mostraDados();
+    </script>
+</body>
+</html>
