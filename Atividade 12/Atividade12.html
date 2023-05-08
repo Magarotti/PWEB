@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 12</title>
+</head>
+<body>
+    <h1 id="text">fechada</h1>
+    <img id="jan" src="janelafechada.png" onmouseover="abre()" onmouseout="fecha()" onclick="quebra()" style="width: 300px; height: 300px;">
+    <div></div>
+    <script>
+        function fecha(){
+            var img = document.getElementById("jan");
+            var tex = document.getElementById("text");
+            img.src = "janelafechada.png";
+            tex.innerHTML = "Fechada";
+            
+        }
+        function abre(){
+            var img = document.getElementById("jan");
+            var tex = document.getElementById("text");
+            img.src = "janelaaberta.png";
+            tex.innerHTML = "Aberta";
+        }
+        function quebra(){
+            var img = document.getElementById("jan");
+            var tex = document.getElementById("text");
+            img.src = "janelaquebra.png";
+            tex.innerHTML = "Quebrou";
+        }
+    </script>
+</body>
+</html>
